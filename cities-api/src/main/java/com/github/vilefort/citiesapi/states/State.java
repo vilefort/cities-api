@@ -26,8 +26,8 @@ import java.util.List;
 
         private Integer ibge;
 
-    /*// 1st
-    @Column(name = "pais")
+    // 1st
+  /*  @Column(name = "pais")
     private Integer countryId;*/
 
 
@@ -44,28 +44,9 @@ import java.util.List;
         public State() {
         }
 
-        /*
-         *
-         * @param id
-         * @param name
-         * @param uf
-         * @param ibge
-         * @param country
-         * @param ddd
 
-        public State(Long id, String name, String uf, Integer ibge,
-                     Country country, List<Integer> ddd) {
-            this.id = id;
-            this.name = name;
-            this.uf = uf;
-            this.ibge = ibge;
-            this.countryId = countryId;
-            this.ddd = ddd;
-        }
 
-         */
-
-        public Long getId() {
+        public Long getID() {
             return id;
         }
 
@@ -73,15 +54,15 @@ import java.util.List;
             return name;
         }
 
-        public String getUf() {
+        public String getUF() {
             return uf;
         }
 
-        public Integer getIbge() {
+        public Integer getCodigoIBGe() {
             return ibge;
         }
 
-        public List<Integer> getDdd() {
+        public List<Integer> getDDD() {
             return ddd;
         }
 

@@ -1,13 +1,16 @@
 package com.github.vilefort.citiesapi.cities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import com.github.vilefort.citiesapi.countries.Country;
+import com.github.vilefort.citiesapi.states.State;
+import org.hibernate.annotations.ManyToAny;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
 import org.springframework.data.geo.Point;
+
+import java.util.List;
 
 @Entity
 @Table(name = "cidade")
@@ -24,7 +27,7 @@ public class City {
 
     private Integer uf;
 
-    private Integer ibge;
+     private Integer ibge;
 
     // 1st
     @Column(name = "lat_lon")

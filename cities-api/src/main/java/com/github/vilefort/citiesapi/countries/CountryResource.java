@@ -1,7 +1,6 @@
 package com.github.vilefort.citiesapi.countries;
 
-import com.github.vilefort.citiesapi.countries.Country;
-import com.github.vilefort.citiesapi.countries.reposiory.CountryRepository;
+import com.github.vilefort.citiesapi.countries.repository.CountryRepository;
 
 import java.util.Optional;
 
@@ -31,7 +30,7 @@ public class CountryResource {
         return repository.findAll(page);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id={id}")
     public ResponseEntity getOne(@PathVariable Long id) {
         Optional<Country> optional = repository.findById(id);
         if (optional.isPresent()) {
@@ -40,6 +39,17 @@ public class CountryResource {
             return ResponseEntity.notFound().build();
         }
     }
+
+
+    @GetMapping("/{name}")
+    public Country getOne(@PathVariable String name) {
+        Optional<Country> optional = repository.findByName(name);
+         return optional.get();
+        }
+
+
+
+
     /* o getmapping vai fazer a consulta a partir de um id ( Countries/id) e mostrar esses dados.
 aula 8 4minutos
      */

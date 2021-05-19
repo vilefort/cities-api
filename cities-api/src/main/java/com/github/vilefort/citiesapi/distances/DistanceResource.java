@@ -33,6 +33,10 @@ public class DistanceResource {
         log.info("byCube");
         return ResponseEntity.ok().body(service.distanceByCubeInMeters(city1, city2));
     }
+
+
+
+
 // Calculo manual da distancia
  /*   @GetMapping("/by-math")
     public Double byMath(@RequestParam(name = "from") final Long city1,
